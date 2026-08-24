@@ -1,17 +1,16 @@
 # Peace Intel — Research
 
-Audience landing pages for the user-research sprint. Static design prototype for internal
+Audience landing pages for the user-research sprint. The audience chooser is the home page. Static design prototype for internal
 review, not for distribution. No build step; every page is a single self-contained HTML file.
 
 ## Pages
 
 | | |
 |---|---|
-| [Landing](https://thatmattgillespie.github.io/peaceintel-research/) | General landing page, with an audience routing strip at `#who` |
-| [Audiences](https://thatmattgillespie.github.io/peaceintel-research/audiences.html) | Opens on a chooser, then reveals one of five audience versions |
+| [Home](https://thatmattgillespie.github.io/peaceintel-research/) | The audience chooser; opens on a chooser, then reveals one of five audience versions |
 | [Problem statements](https://thatmattgillespie.github.io/peaceintel-research/problems.html) | All five problem statements on one sheet, for interviews |
 
-## How the audience page works
+## How the home page works
 
 It opens on a fill-in-the-blank sentence — *"I work at ⌄a funding organization as a ⌄senior
 leader."* — and reveals the matching version once both blanks are filled. Five combinations,
@@ -25,12 +24,13 @@ because practitioners exist on the implementer side only:
 Every state is a shareable URL, and **any link carrying both parameters skips the chooser**:
 
 ```
-audiences.html?v=funders&role=senior-leadership
-audiences.html?v=implementers&role=practitioners
+index.html?v=funders&role=senior-leadership
+index.html?v=implementers&role=practitioners
 ```
 
 `?v=` on its own opens the chooser with the organisation already filled in. `funders.html`,
-`program-managers.html` and `practitioners.html` redirect to their equivalent state. Note that
+`program-managers.html` and `practitioners.html` redirect to their equivalent state, as does
+`audiences.html` — the chooser's old URL, kept as a redirect because it was already shared. Note that
 `program-managers.html` was written for the funder side, so it lands on Funders → Program
 Managers.
 
@@ -49,15 +49,12 @@ per side. Everything else is shared.
 
 ## Relationship to peaceintel-style-review
 
-`peaceintel-style-review` is the earlier review site and remains live and untouched. It holds
+`peaceintel-style-review` is the earlier review site and remains live. It holds
 its own copy of these pages plus `toggle-lab.html`, a record of the audience-toggle
 alternatives explored before the chooser replaced them. **This repo is the current one for the
 research sprint**; edits should land here.
 
 ## Open
 
-- **Corpus stats.** The landing page still shows an older set of numbers than the audience page.
-  The July 31 library metrics match the audience page; the landing page needs updating, pending
-  a decision on whether to lead with one number instead of five.
 - **Copy.** The AI-specific language ("corpus", "LLM agent", "machine-readable") is inventoried
   and awaiting a rewrite.
